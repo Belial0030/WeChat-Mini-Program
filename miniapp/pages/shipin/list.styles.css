@@ -1,0 +1,217 @@
+.video-learning-page {
+  min-height: 100vh;
+  background: #f3f6fa;
+}
+.video-page-heading {
+  padding: 28rpx 30rpx 16rpx;
+}
+.video-page-heading > view {
+  color: #17243b;
+  font-size: 40rpx;
+  font-weight: 600;
+}
+.video-page-heading > text {
+  display: block;
+  color: #5b6b80;
+  font-size: 25rpx;
+  margin-top: 12rpx;
+}
+.course-search {
+  display: flex;
+  gap: 16rpx;
+  padding: 20rpx 28rpx 10rpx;
+  align-items: center;
+}
+.course-search-input {
+  flex: 1;
+  min-width: 0;
+  height: 88rpx;
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border: 1rpx solid #dce5ed;
+  border-radius: 16rpx;
+  padding: 0 24rpx;
+}
+.course-search-input > text {
+  color: #5b6b80;
+  font-size: 32rpx;
+  margin-right: 12rpx;
+}
+.course-search-input input {
+  flex: 1;
+  min-width: 0;
+  font-size: 26rpx;
+  color: #17243b;
+}
+.course-search-button {
+  margin: 0;
+  min-width: 96rpx;
+  min-height: 88rpx;
+  line-height: 88rpx;
+  padding: 0 16rpx;
+  border-radius: 16rpx;
+  background: #0f766e;
+  color: #fff;
+  font-size: 26rpx;
+}
+.course-toolbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 6rpx 28rpx 20rpx;
+}
+.category-button,
+.course-add {
+  background: transparent;
+  color: #475569;
+  font-size: 25rpx;
+  padding: 0;
+  margin: 0;
+  line-height: 88rpx;
+  min-height: 88rpx;
+}
+.category-button text {
+  margin-right: 12rpx;
+}
+.course-add {
+  color: #0f766e;
+}
+.video-learning-page .uni-drawer {
+  z-index: 1200;
+}
+.category-header {
+  height: 128rpx;
+  padding: 20rpx 24rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1rpx solid #e0e8ef;
+}
+.category-title {
+  font-size: 32rpx;
+  font-weight: 600;
+  color: #17243b;
+}
+.category-close {
+  margin: 0;
+  padding: 0;
+  width: 88rpx;
+  min-width: 88rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+  font-size: 40rpx;
+  color: #5b6b80;
+  background: transparent;
+}
+.category-scroll {
+  height: calc(100% - 128rpx);
+  padding: 24rpx;
+  box-sizing: border-box;
+}
+/* #ifdef H5 */
+.video-learning-page .uni-drawer {
+  top: var(--window-top, 0px);
+}
+/* #endif */
+.category-option {
+  padding: 26rpx 24rpx;
+  margin-bottom: 12rpx;
+  min-height: 88rpx;
+  border-radius: 14rpx;
+  color: #475569;
+  font-size: 28rpx;
+}
+.category-active {
+  background: #e7f4ef;
+  color: #0f766e;
+  font-weight: 600;
+}
+.video-course-list {
+  padding: 0 28rpx 40rpx;
+}
+.video-course-card {
+  margin-bottom: 24rpx;
+  background: #fff;
+  border: 1rpx solid #e0e8ef;
+  border-radius: 22rpx;
+  overflow: hidden;
+}
+.video-course-cover {
+  height: 332rpx;
+  position: relative;
+  background: #dce9ef;
+}
+.video-course-cover image {
+  width: 100%;
+  height: 100%;
+}
+.video-cover-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  font-size: 80rpx;
+  color: #6c929f;
+}
+.video-play {
+  position: absolute;
+  bottom: 24rpx;
+  right: 24rpx;
+  background: rgba(15, 35, 50, 0.7);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64rpx;
+  height: 64rpx;
+  border-radius: 50%;
+  font-size: 30rpx;
+}
+.video-course-copy {
+  padding: 26rpx 28rpx;
+}
+.video-category {
+  color: #0f766e;
+  font-size: 23rpx;
+  background: #e7f4ef;
+  padding: 6rpx 14rpx;
+  border-radius: 8rpx;
+}
+.video-course-name {
+  margin-top: 20rpx;
+  color: #17243b;
+  font-size: 32rpx;
+  line-height: 1.65;
+  font-weight: 500;
+  overflow-wrap: anywhere;
+}
+.video-course-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16rpx;
+  margin-top: 16rpx;
+}
+.video-watch {
+  color: #5b6b80;
+  font-size: 24rpx;
+}
+.video-watch > text {
+  margin-left: 8rpx;
+}
+.video-actions {
+  display: flex;
+  gap: 18rpx;
+}
+.video-actions button {
+  font-size: 24rpx;
+  color: #0f766e;
+  background: transparent;
+  padding: 0 8rpx;
+  margin: 0;
+  min-height: 88rpx;
+  line-height: 88rpx;
+}
+.video-actions .video-delete {
+  color: #b91c1c;
+}

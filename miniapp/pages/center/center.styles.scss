@@ -1,0 +1,121 @@
+.learning-profile {
+  min-height: 100vh;
+  padding: 28rpx 28rpx 50rpx;
+  box-sizing: border-box;
+  background: #f3f6fa;
+}
+.profile-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24rpx;
+  padding: 34rpx 28rpx;
+  border-radius: 24rpx;
+  background: #12364a;
+  color: #fff;
+}
+.profile-person {
+  display: flex;
+  align-items: center;
+  gap: 26rpx;
+  flex: 1;
+  min-width: 0;
+}
+.profile-avatar {
+  flex-shrink: 0;
+  width: 128rpx;
+  height: 128rpx;
+  border-radius: 50%;
+  border: 4rpx solid rgba(255, 255, 255, 0.25);
+}
+.profile-person-copy {
+  flex: 1;
+  min-width: 0;
+}
+.profile-eyebrow {
+  color: #a5ded2;
+  font-size: 17rpx;
+  letter-spacing: 3rpx;
+}
+.profile-name {
+  font-size: 34rpx;
+  font-weight: 600;
+  line-height: 1.6;
+  margin: 10rpx 0;
+  overflow-wrap: anywhere;
+}
+.profile-study {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8rpx;
+  color: #d1e5ed;
+  font-size: 23rpx;
+  line-height: 1.7;
+}
+.profile-study > text {
+  font-size: 27rpx;
+}
+.profile-settings {
+  flex-shrink: 0;
+  color: #c5e5e1;
+  font-size: 40rpx;
+}
+.profile-section-title {
+  margin: 38rpx 4rpx 22rpx;
+  font-size: 31rpx;
+  font-weight: 600;
+  color: #17243b;
+}
+.profile-links {
+  border: 1rpx solid #e0e8ef;
+  border-radius: 22rpx;
+  background: #fff;
+  overflow: hidden;
+}
+.profile-link {
+  display: flex;
+  align-items: center;
+  gap: 22rpx;
+  padding: 22rpx 26rpx;
+  min-height: 116rpx;
+  border-bottom: 1rpx solid #edf1f5;
+  box-sizing: border-box;
+}
+.profile-link:last-child {
+  border-bottom: 0;
+}
+.profile-link-symbol {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64rpx;
+  height: 64rpx;
+  border-radius: 16rpx;
+  background: #e7f4ef;
+  color: #0f766e;
+  font-size: 33rpx;
+}
+.profile-link-label {
+  flex: 1;
+  min-width: 0;
+  color: #334155;
+  font-size: 28rpx;
+  line-height: 1.7;
+}
+.profile-link-arrow {
+  color: #94a3b8;
+  font-size: 26rpx;
+}
+.profile-link-hover {
+  background: #f5faf8;
+}
+.profile-footer {
+  margin-top: 30rpx;
+  text-align: center;
+  color: #5b6b80;
+  font-size: 23rpx;
+  line-height: 1.8;
+  padding-bottom: env(safe-area-inset-bottom);
+}

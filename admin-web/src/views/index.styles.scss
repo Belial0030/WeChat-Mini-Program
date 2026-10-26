@@ -1,0 +1,23 @@
+.admin-shell {
+  min-height: 100vh;
+  flex-direction: column;
+  background: #f3f6fa;
+}
+.admin-body {
+  min-height: calc(100vh - 72px);
+  min-width: 0;
+  align-items: stretch;
+}
+.navigation-scrim {
+  display: none;
+}
+@media (max-width: 900px) {
+  .navigation-scrim {
+    display: block;
+    position: fixed;
+    inset: 72px 0 0;
+    background: rgba(15, 23, 42, 0.4);
+    border: 0;
+    z-index: 19;
+  }
+}

@@ -1,0 +1,68 @@
+
+$color-primary: #b49950;
+
+.content {
+    height: calc(100vh - 44px);
+    overflow: auto;
+}
+
+.content:after {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    content: '';
+    background-image: radial-gradient(ellipse at top right, #d4ece7 0%, #f3f6fa 65%);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+
+.logo {
+    text-align: center;
+
+image {
+    height: 200rpx;
+    width: 200rpx;
+    margin: 0 0 60rpx;
+}
+}
+
+.uni-form-item {
+    margin-bottom: 40rpx;
+    padding: 0;
+
+.uni-input {
+    font-size: 30rpx;
+    padding: 7px 0;
+}
+}
+
+button[type="primary"] {
+    background-color: $color-primary;
+    border-radius: 0;
+    font-size: 34rpx;
+    margin-top: 60rpx;
+}
+
+.links {
+    text-align: center;
+    margin-top: 40rpx;
+    font-size: 26rpx;
+    color: #999;
+
+view {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 10rpx;
+}
+
+.link-highlight {
+    color: $color-primary
+}
+}
+
+.picker-select-input {
+    line-height: 88rpx;
+}

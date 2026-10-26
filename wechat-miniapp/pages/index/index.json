@@ -1,0 +1,9 @@
+{
+  "navigationBarBackgroundColor": "#ffffff",
+  "navigationBarTextStyle": "black",
+  "navigationBarTitleText": "网络安全知识培训系统首页",
+  "usingComponents": {
+    "ai-assistant": "/components/ai-assistant/ai-assistant",
+    "uni-icons": "/components/uni-ui/lib/uni-icons/uni-icons"
+  }
+}

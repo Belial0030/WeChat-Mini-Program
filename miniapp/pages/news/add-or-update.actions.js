@@ -1,0 +1,69 @@
+export default {
+    newsTypesChange(e) {
+        this.newsTypesIndex = e.target.value;
+        this.ruleForm.newsValue = this.newsTypesOptions[this.newsTypesIndex].indexName;
+        this.ruleForm.newsTypes = this.newsTypesOptions[this.newsTypesIndex].codeIndex;
+    },
+
+    newsPhotoTap() {
+        let _this = this;
+        this.$api.upload(function (res) {
+            _this.ruleForm.newsPhoto = _this.$base.url + 'upload/' + res.file;
+            _this.$forceUpdate();
+            _this.$nextTick(() => {
+                // _this.styleChange()
+            });
+        });
+    },
+
+    insertTimeConfirm(val) {
+        this.ruleForm.insertTime = val.result;
+        this.$forceUpdate();
+    },
+
+    createTimeConfirm(val) {
+        this.ruleForm.createTime = val.result;
+        this.$forceUpdate();
+    },
+
+    getUUID() {
+        return new Date().getTime();
+    },
+
+    async onSubmitTap() {
+        if (!this.ruleForm.newsName) {
+            this.$utils.msg(`公告信息标题不能为空`);
+            return;
+        }
+        if (!this.ruleForm.newsPhoto) {
+            this.$utils.msg(`公告信息图片不能为空`);
+            return;
+        }
+        if (this.ruleForm.id) {
+            await this.$api.update(`news`, this.ruleForm);
+        } else {
+            await this.$api.save(`news`, this.ruleForm);
+        }
+        uni.setStorageSync('pingluenStateState', true);
+        this.$utils.msgBack('提交成功');
+    },
+
+    getDate(type) {
+        const date = new Date();
+        let year = date.getFullYear();
+        let month = date.getMonth() + 1;
+        let day = date.getDate();
+        if (type === 'start') {
+            year = year - 60;
+        } else if (type === 'end') {
+            year = year + 2;
+        }
+        month = month > 9 ? month : '0' + month;
+        day = day > 9 ? day : '0' + day;
+        return `${year}-${month}-${day}`;
+    },
+
+    toggleTab(str) {
+        this.$refs[str].show();
+    },
+};

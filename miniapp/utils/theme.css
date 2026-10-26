@@ -1,0 +1,29 @@
+page {
+  --publicMainColor: #0f766e;
+  --publicSubColor: #173f54;
+  --learning-ink: #17243b;
+  --learning-muted: #5b6b80;
+  --learning-border: #e0e8ef;
+  background: #f3f6fa;
+  color: #17243b;
+  font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+}
+button::after {
+  border: 0;
+}
+button[type='primary'] {
+  background: #0f766e;
+  color: #fff;
+  border-radius: 16rpx;
+}
+button[disabled] {
+  opacity: 0.55;
+}
+@media (prefers-reduced-motion: reduce) {
+  view,
+  button,
+  image {
+    animation: none !important;
+    transition: none !important;
+  }
+}

@@ -1,0 +1,121 @@
+.learning-community {
+  min-height: 100vh;
+  background: #f3f6fa;
+}
+.community-heading {
+  padding: 30rpx 30rpx 16rpx;
+}
+.community-heading > view {
+  color: #17243b;
+  font-size: 40rpx;
+  font-weight: 600;
+}
+.community-heading > text {
+  display: block;
+  color: #5b6b80;
+  font-size: 25rpx;
+  line-height: 1.7;
+  margin-top: 12rpx;
+}
+.community-search {
+  padding: 20rpx 28rpx 28rpx;
+  display: flex;
+  align-items: center;
+  gap: 16rpx;
+}
+.community-search-field {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  min-width: 0;
+  height: 88rpx;
+  padding: 0 24rpx;
+  background: #fff;
+  border: 1rpx solid #dce5ed;
+  border-radius: 16rpx;
+}
+.community-search-field > text {
+  color: #5b6b80;
+  font-size: 30rpx;
+  margin-right: 14rpx;
+}
+.community-search-field input {
+  flex: 1;
+  min-width: 0;
+  color: #17243b;
+  font-size: 26rpx;
+}
+.community-search > button {
+  padding: 0 20rpx;
+  margin: 0;
+  line-height: 88rpx;
+  min-height: 88rpx;
+  border-radius: 16rpx;
+  background: #0f766e;
+  color: #fff;
+  font-size: 26rpx;
+}
+.community-posts {
+  padding: 0 28rpx 40rpx;
+}
+.community-post {
+  padding: 28rpx;
+  margin-bottom: 22rpx;
+  border-radius: 22rpx;
+  background: #fff;
+  border: 1rpx solid #e0e8ef;
+}
+.community-post-heading {
+  display: flex;
+  align-items: center;
+  gap: 16rpx;
+}
+.community-post-symbol {
+  flex-shrink: 0;
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 16rpx;
+  background: #e7f4ef;
+  color: #0f766e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 32rpx;
+}
+.community-post-title {
+  color: #17243b;
+  font-size: 31rpx;
+  line-height: 1.6;
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+.community-post-summary {
+  color: #475569;
+  font-size: 26rpx;
+  line-height: 1.8;
+  margin: 22rpx 0;
+  overflow-wrap: anywhere;
+}
+.community-post-author {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12rpx;
+  font-size: 23rpx;
+  color: #5b6b80;
+  padding-top: 20rpx;
+  border-top: 1rpx solid #edf1f5;
+}
+.community-role {
+  color: #0f766e;
+  font-size: 21rpx;
+  background: #e7f4ef;
+  padding: 5rpx 12rpx;
+  border-radius: 6rpx;
+}
+.community-post-time {
+  color: #5b6b80;
+  font-size: 22rpx;
+  margin-top: 14rpx;
+}

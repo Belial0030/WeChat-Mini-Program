@@ -1,0 +1,46 @@
+# Dependencies and generated outputs
+**/node_modules/
+**/target/
+**/dist/
+**/unpackage/
+**/.cache/
+coverage/
+
+# The sanitized wechat-miniapp build is intentionally included for direct import.
+# Private developer settings remain excluded below.
+
+# Private configuration and developer settings
+**/.env
+**/.env.*
+!**/.env.example
+**/.npmrc
+**/application-local.yml
+**/application-*.local.yml
+**/project.private.config.json
+**/.idea/
+**/.vscode/
+**/.hbuilderx/
+*.iml
+*.pem
+*.key
+*.p12
+*.pfx
+*.jks
+*.keystore
+
+# Runtime data, local audits and backups
+*.log
+*.pid
+*.jar
+*.war
+*.class
+*.sql.bak
+*.zip
+*.rar
+*.7z
+/logs/
+/uploads/
+/backups/
+/tools/audits/
+.DS_Store
+Thumbs.db

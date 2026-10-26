@@ -1,0 +1,89 @@
+
+.container {
+    padding: 20rpx;
+}
+
+.content:after {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    content: '';
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+
+textarea {
+    border: 1rpx solid #EEEEEE;
+    border-radius: 20rpx;
+    padding: 20rpx;
+}
+
+.title {
+    width: 180rpx;
+}
+
+.avator {
+    width: 150rpx;
+    height: 60rpx;
+}
+
+.right-input {
+    flex: 1;
+    text-align: left;
+    padding: 0 24rpx;
+}
+
+.cu-form-group.active {
+    justify-content: space-between;
+}
+
+.cu-form-group .title {
+    height: auto;
+    line-height:30rpx
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 20rpx 0;
+}
+
+.cu-form-group {
+    padding: 0 24rpx;
+    background-color: transparent;
+    min-height: inherit;
+}
+
+.cu-form-group+.cu-form-group {
+    border: 0;
+}
+
+.cu-form-group uni-input {
+    padding: 0 30rpx;
+}
+
+.uni-input {
+    padding: 0 30rpx;
+}
+
+.cu-form-group uni-textarea {
+    padding: 30rpx;
+    margin: 0;
+}
+
+.cu-form-group uni-picker::after {
+    line-height: 80rpx;
+}
+
+.select .uni-input {
+    line-height: 80rpx;
+}
+
+.input .right-input {
+    line-height: 88rpx;
+}

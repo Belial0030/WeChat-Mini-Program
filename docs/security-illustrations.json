@@ -1,0 +1,46 @@
+{
+  "date": "2026-10-25",
+  "mode": "Built-in image_gen",
+  "assets": [
+    {
+      "key": "account",
+      "prompt": "Use case: illustration-story. Asset type: original course cover and homepage banner for a Chinese cybersecurity awareness training application. Create a polished wide landscape editorial 3D illustration about account security: a large elegant teal shield and secure key, a smartphone with simple authentication symbols and a fingerprint, a few floating credential cards. Calm trustworthy navy (#12364a), deep teal (#0f766e), mint and warm off-white palette, refined soft lighting, subtle material texture, clear uncluttered shapes, ample breathing room, key subjects centered so they remain visible when cropped to 16:9. Friendly education for adults, technically neutral visual metaphor. No words, no letters, no numbers, no logos, no watermark, no hooded hackers, no green code rain. Finished production illustration, not a UI screenshot.",
+      "outputs": [
+        "backend/src/main/resources/static/upload/security/account.jpg",
+        "miniapp/static/security/account.jpg"
+      ]
+    },
+    {
+      "key": "phishing",
+      "prompt": "Use case: illustration-story. Asset type: original wide landscape course cover for an adult Chinese cybersecurity awareness app. Polished editorial 3D illustration with clear uncluttered composition, refined soft studio lighting and subtle material texture. Cohesive palette navy #12364a, deep teal #0f766e, mint, warm off-white, with a tiny coral accent only for risk. Keep subjects centered with breathing room so a 16:9 crop stays readable. No text, letters, numbers, logos, watermarks, hooded hackers or green code rain. Finished production artwork, not a UI screenshot. Subject: recognize phishing messages. An elegant smartphone displaying a simple envelope symbol; a small coral fishing hook caught on a suspicious envelope outside the phone, while a teal protective shield blocks the hook. A second authentic envelope is marked by a small teal check badge. The scene clearly communicates pause, verify and avoid fraudulent links; calm educational tone.",
+      "outputs": [
+        "backend/src/main/resources/static/upload/security/phishing.jpg",
+        "miniapp/static/security/phishing.jpg"
+      ]
+    },
+    {
+      "key": "privacy",
+      "prompt": "Use case: illustration-story. Asset type: original wide landscape course cover for an adult Chinese cybersecurity awareness app. Polished editorial 3D illustration with clear uncluttered composition, refined soft studio lighting and subtle material texture. Cohesive palette navy #12364a, deep teal #0f766e, mint, warm off-white, with a tiny coral accent only for risk. Keep subjects centered with breathing room so a 16:9 crop stays readable. No text, letters, numbers, logos, watermarks, hooded hackers or green code rain. Finished production artwork, not a UI screenshot. Subject: personal information and app privacy. A smartphone beside a person profile silhouette, a protected document with abstract lines, small location-pin and camera symbols held behind a large translucent teal privacy shield. Show deliberate protection and permissions, minimal and reassuring, no surveillance horror imagery.",
+      "outputs": [
+        "backend/src/main/resources/static/upload/security/privacy.jpg",
+        "miniapp/static/security/privacy.jpg"
+      ]
+    },
+    {
+      "key": "devices",
+      "prompt": "Use case: illustration-story. Asset type: original wide landscape course cover for an adult Chinese cybersecurity awareness app. Polished editorial 3D illustration with clear uncluttered composition, refined soft studio lighting and subtle material texture. Cohesive palette navy #12364a, deep teal #0f766e, mint, warm off-white, with a tiny coral accent only for risk. Keep subjects centered with breathing room so a 16:9 crop stays readable. No text, letters, numbers, logos, watermarks, hooded hackers or green code rain. Finished production artwork, not a UI screenshot. Subject: secure devices and home network. A laptop, a smartphone and a compact modern wireless router arranged in a harmonious triangle, joined by clean glowing teal connections. Central protective shield, subtle software update arrow and small check badges. Clear trustworthy network security teaching visual, no illegible screens or cable clutter.",
+      "outputs": [
+        "backend/src/main/resources/static/upload/security/devices.jpg",
+        "miniapp/static/security/devices.jpg"
+      ]
+    },
+    {
+      "key": "backup",
+      "prompt": "Use case: illustration-story. Asset type: original wide landscape course cover for an adult Chinese cybersecurity awareness app. Polished editorial 3D illustration with clear uncluttered composition, refined soft studio lighting and subtle material texture. Cohesive palette navy #12364a, deep teal #0f766e, mint, warm off-white, with a tiny coral accent only for risk. Keep subjects centered with breathing room so a 16:9 crop stays readable. No text, letters, numbers, logos, watermarks, hooded hackers or green code rain. Finished production artwork, not a UI screenshot. Subject: data backup and recovery. A refined external hard drive, a soft cloud symbol and two neat file folders linked by circular recovery arrows around a small teal shield. Show several protected copies in separate places, hopeful and reassuring, clean composition, no padlocks on files that suggest ransomware.",
+      "outputs": [
+        "backend/src/main/resources/static/upload/security/backup.jpg",
+        "miniapp/static/security/backup.jpg"
+      ]
+    }
+  ]
+}

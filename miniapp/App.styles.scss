@@ -1,0 +1,14 @@
+@import './colorui/main';
+@import './colorui/icon';
+/*每个页面公共css */
+@import './assets/css/style.scss';
+// 全局公共样式css
+@import './utils/theme';
+
+.uni-product-list {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin-top: 60px;
+}

@@ -1,0 +1,96 @@
+{
+  "pages": [
+    "pages/login/login",
+    "pages/register/register",
+    "pages/forget/forget",
+    "pages/center/center",
+    "pages/user-info/userinfo",
+    "pages/exampapertopic/list",
+    "pages/exampapertopic/list2",
+    "pages/exampapertopic/add-or-update",
+    "pages/exampapertopic/detail",
+    "pages/forum/forum-index",
+    "pages/forum/forum-detail",
+    "pages/forum/forum-my",
+    "pages/forum/forum-add-or-update",
+    "pages/news/list",
+    "pages/news/list2",
+    "pages/news/add-or-update",
+    "pages/news/detail",
+    "pages/shipin/list",
+    "pages/shipin/list2",
+    "pages/shipin/add-or-update",
+    "pages/shipin/detail",
+    "pages/xuexizuji/list",
+    "pages/xuexizuji/list2",
+    "pages/xuexizuji/add-or-update",
+    "pages/xuexizuji/detail",
+    "pages/yonghu/list",
+    "pages/yonghu/list2",
+    "pages/yonghu/add-or-update",
+    "pages/yonghu/detail",
+    "pages/exampaper/list",
+    "pages/exampaper/exam",
+    "pages/examrecord/list",
+    "pages/examrecord/detail",
+    "pages/examrewrongquestion/list",
+    "pages/index/index"
+  ],
+  "subPackages": [],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "网络安全知识培训系统",
+    "navigationBarBackgroundColor": "#ffffff",
+    "backgroundColor": "#f3f6fa"
+  },
+  "tabBar": {
+    "color": "#64748b",
+    "selectedColor": "#0f766e",
+    "borderStyle": "white",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "static/tabs/learn-home.png",
+        "selectedIconPath": "static/tabs/learn-home-active.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/exampaper/list",
+        "iconPath": "static/tabs/learn-exam.png",
+        "selectedIconPath": "static/tabs/learn-exam-active.png",
+        "text": "在线考试"
+      },
+      {
+        "pagePath": "pages/shipin/list",
+        "iconPath": "static/tabs/learn-video.png",
+        "selectedIconPath": "static/tabs/learn-video-active.png",
+        "text": "视频学习"
+      },
+      {
+        "pagePath": "pages/forum/forum-index",
+        "iconPath": "static/tabs/learn-forum.png",
+        "selectedIconPath": "static/tabs/learn-forum-active.png",
+        "text": "论坛"
+      },
+      {
+        "pagePath": "pages/center/center",
+        "iconPath": "static/tabs/learn-user.png",
+        "selectedIconPath": "static/tabs/learn-user-active.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "小程序将使用定位功能"
+    }
+  },
+  "requiredPrivateInfos": [
+    "getLocation",
+    "chooseLocation"
+  ],
+  "usingComponents": {
+    "a-i-assistant": "/components/ai-assistant/ai-assistant"
+  }
+}

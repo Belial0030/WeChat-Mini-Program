@@ -1,0 +1,10 @@
+# Copy to application-local.yml in THIS folder and fill in your own values.
+# application-local.yml is ignored by Git and is not packaged into the JAR.
+spring:
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/cybersecurityknowledge?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
+    username: your_database_user
+    password: ""
+
+ai:
+  api-key: ""
