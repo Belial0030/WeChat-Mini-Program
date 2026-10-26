@@ -1,34 +1,34 @@
-# 网络安全知识培训系统
+# Cybersecurity Training System
 
-基于 Spring Boot、Vue 2 和 uni-app 开发的网络安全知识学习与培训项目，包含微信小程序和 Web 管理后台，提供课程学习、知识测评、学习交流与教学管理等功能。
+A cybersecurity learning and training project built with Spring Boot, Vue 2, and uni-app. It combines a WeChat Mini Program with a web admin dashboard, providing course learning, knowledge assessments, discussions, and training management.
 
-## 主要功能
+## Main Features
 
-### 微信小程序
+### WeChat Mini Program
 
-- **课程学习**：浏览网络安全课程，观看教学视频。
-- **在线测评**：参加知识测验，查看考试记录与错题。
-- **学习交流**：发布讨论、回复帖子，分享学习经验。
-- **公告查看**：浏览培训公告与网络安全相关内容。
-- **个人中心**：维护个人资料，查看学习足迹。
-- **智能问答**：通过 AI 助手进行网络安全知识问答。
+- **Course Learning**: Browse cybersecurity courses and watch instructional videos.
+- **Online Assessments**: Take knowledge quizzes, review exam history, and revisit incorrect answers.
+- **Discussions**: Create posts, reply to discussions, and share learning experiences.
+- **Announcements**: Read training announcements and cybersecurity-related content.
+- **Personal Profile**: Manage personal information and view learning history.
+- **AI Assistant**: Ask cybersecurity questions through an AI assistant.
 
-### 管理后台
+### Admin Dashboard
 
-- **用户管理**：管理学员账号与用户信息。
-- **课程管理**：维护课程资料与教学视频。
-- **考试管理**：管理题库、试卷、试卷选题与考试记录。
-- **内容管理**：维护公告信息与学习讨论。
+- **User Management**: Manage learner accounts and user profiles.
+- **Course Management**: Maintain course materials and instructional videos.
+- **Exam Management**: Manage question banks, exam papers, question assignments, and exam records.
+- **Content Management**: Maintain announcements and learning discussions.
 
-## 知识内容
+## Learning Topics
 
-围绕账号与密码安全、网络钓鱼识别、个人隐私保护、设备安全防护、数据备份与恢复等主题组织课程、题库和交流内容，帮助学习者了解常见网络风险与日常防护方法。
+Courses, quizzes, and discussions cover account and password security, phishing awareness, personal privacy protection, device security, and data backup and recovery. The content helps learners understand common online threats and everyday protective practices.
 
-## 技术栈
+## Technology Stack
 
-| 模块 | 技术 |
+| Module | Technologies |
 | --- | --- |
-| 微信小程序 | uni-app、Vue 2 |
-| 管理后台 | Vue 2、Element UI、Vue Router、Axios |
-| 后端服务 | Spring Boot、MyBatis-Plus |
-| 数据存储 | MySQL |
+| WeChat Mini Program | uni-app, Vue 2 |
+| Admin Dashboard | Vue 2, Element UI, Vue Router, Axios |
+| Backend | Spring Boot, MyBatis-Plus |
+| Database | MySQL |

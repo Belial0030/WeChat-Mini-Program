@@ -2,7 +2,7 @@
   "kind": "sanitized-source-and-wechat-build-release",
   "allChecksPassed": true,
   "sourceFiles": 1325,
-  "sourceBytes": 14759288,
+  "sourceBytes": 14759525,
   "privacy": {
     "knownPrivateMarkerMatches": 0,
     "commonCredentialPatternMatches": 0,
@@ -155,8 +155,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 1468,
-      "sha256": "f2e749d96756c9cfdbed12d6229b9e2005b4caaac5eaca475a3b9653bd48169a"
+      "bytes": 1705,
+      "sha256": "b1ddba39a97e1052abaf7b7bb9c340fcccfa7eb9311a777f5773316df8449a37"
     },
     {
       "path": "THIRD_PARTY_NOTICES.md",
