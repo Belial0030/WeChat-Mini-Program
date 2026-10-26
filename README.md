@@ -1,61 +1,61 @@
-# 网络安全知识培训系统
+# Cybersecurity Training System
 
-基于 Spring Boot、Vue 2 和 uni-app 的网络安全学习演示项目，包含课程视频、知识测评、公告、学习讨论及管理后台。教学内容覆盖账号安全、网络钓鱼、隐私保护、设备防护和备份恢复。
+A cybersecurity education demo built with Spring Boot, Vue 2, and uni-app. It includes video courses, quizzes, announcements, learning discussions, and an admin dashboard. The training content covers account security, phishing awareness, privacy protection, device security, and data backup and recovery.
 
-本目录是经过隐私清理的独立发布副本。原项目中的 API Key、数据库密码、小程序 AppID、个人资料、会话和学习考试历史均未保留。课程、题库及配套素材保留，供本地学习和演示。
+This repository is a sanitized release copy. Original API keys, database passwords, Mini Program AppIDs, personal profiles, sessions, and learning and exam histories have been removed. Courses, question banks, and supporting media are included for local learning and demonstrations.
 
-**授权状态：原项目包含购买的模板，整体开源和再分发授权尚待核实。本副本未添加项目整体开源许可证。公开发布前请核对原模板授权，详见 [授权状态](LICENSE-STATUS.md)。**
+**Licensing status: The original project includes a purchased template. Permission to release the complete project as open source or redistribute it has not yet been verified. No project-wide open-source license has been added. Check the original template's terms before making the repository public. See [Licensing status](LICENSE-STATUS.md).**
 
-## 目录
+## Project Structure
 
-| 目录 | 用途 |
+| Directory | Purpose |
 | --- | --- |
-| `backend` | Java 后端源码、测试和 Maven 配置 |
-| `admin-web` | Vue 管理后台源码 |
-| `miniapp` | uni-app 小程序源码，用 HBuilderX 打开 |
-| `wechat-miniapp` | 已编译的微信项目，可直接导入微信开发者工具 |
-| `database` | 脱敏初始化脚本及教学内容源文件 |
-| `docs` | 配置、发布和素材说明 |
-| `tools` | 前端检查、回归测试和编译产物同步工具 |
+| `backend` | Java backend source, tests, and Maven configuration |
+| `admin-web` | Vue admin dashboard source |
+| `miniapp` | uni-app Mini Program source; open this directory in HBuilderX |
+| `wechat-miniapp` | Compiled project ready to import into WeChat Developer Tools |
+| `database` | Sanitized initialization SQL and training content source files |
+| `docs` | Configuration, publishing, and asset documentation |
+| `tools` | Frontend checks, regression tests, and build synchronization tools |
 
-本仓库同时提供源码和经过隐私清理的 `wechat-miniapp` 编译目录。依赖目录、后端及管理端的构建产物、本机备份仍由 `.gitignore` 排除。微信编译结果与当前小程序源码逐文件核对一致，详见 [编译与导入说明](docs/WECHAT_IMPORT.md)。
+Both source code and the sanitized `wechat-miniapp` build are included. Dependency directories, backend and admin build outputs, and local backups are excluded by `.gitignore`. The Mini Program source files have been checked against the inputs used for the compiled build. See [Build and import instructions](docs/WECHAT_IMPORT.md).
 
-## 本地运行
+## Local Setup
 
-准备 Java、Maven、MySQL 8、HBuilderX 和微信开发者工具。管理端使用 Vue CLI 4、Vue 2 和 node-sass 4，沿用 Node.js 14 的构建环境；前端检查工具使用 Node.js 18 或更高版本。构建管理端时可通过版本管理工具切换 Node.js。
+Install Java, Maven, MySQL 8, HBuilderX, and WeChat Developer Tools. The admin dashboard uses Vue CLI 4, Vue 2, and node-sass 4 with the existing Node.js 14 build environment. Frontend verification tools require Node.js 18 or later. Use a version manager to switch Node.js versions when building the admin dashboard.
 
-### 1. 初始化演示数据库
+### 1. Initialize the Demo Database
 
-在自己的 MySQL 实例中新建空数据库 `cybersecurityknowledge`，使用 DataGrip 或 MySQL 客户端导入 `database/cybersecurityknowledge.sql`。
+Create a new, empty database named `cybersecurityknowledge` in your own MySQL instance. Import `database/cybersecurityknowledge.sql` using DataGrip or a MySQL client.
 
-该脚本会重建同名表，只应导入新建的演示数据库。包含 15 张表、课程和虚构演示账号；手机号、身份证号和邮箱为空，登录会话、学习足迹及考试历史为空。
+The script recreates tables with matching names. Import it only into a newly created demo database. It provides 15 tables, training content, and fictional demo accounts. Phone numbers, identity document numbers, and email addresses are empty, as are login sessions, learning history, and exam history.
 
-| 角色 | 演示账号 | 演示密码 |
+| Role | Demo username | Demo password |
 | --- | --- | --- |
-| 管理员 | `demo-admin` | `ChangeMe-2026!` |
-| 学员 | `demo-user-1`、`demo-user-2`、`demo-user-3` | `ChangeMe-2026!` |
+| Administrator | `demo-admin` | `ChangeMe-2026!` |
+| Learner | `demo-user-1`, `demo-user-2`, `demo-user-3` | `ChangeMe-2026!` |
 
-这些账号是公开的演示数据，部署时需要自行替换。
+These credentials are public demo data. Replace them before deployment.
 
-### 2. 填写本机配置
+### 2. Configure Your Local Environment
 
-在项目根目录执行：
+Run this command from the project root:
 
 ```powershell
 Copy-Item backend/config/application-local.example.yml backend/config/application-local.yml
 ```
 
-编辑新文件，填写自己的数据库地址、账号和密码。AI 功能需要自行填写 API Key；不配置时，其余学习与管理功能仍可使用。该文件已被 Git 忽略，位于源码资源目录之外，不会打包进入后端 JAR。
+Edit the new file with your own database URL, username, and password. The AI feature requires your own API key; other learning and management features remain available without it. This local file is ignored by Git, is stored outside the source resources directory, and is not packaged into the backend JAR.
 
-如果希望本机凭据完全放在项目目录之外，启动 BAT 还会自动读取 Windows 的 `%USERPROFILE%/.cybersecurity-training/application-local.yml`。把配置模板复制到那里并填写即可；也可用 `CYBERSECURITY_CONFIG_DIR` 指定其他外部目录。默认选择普通用户目录，避免应用隔离导致编辑工具和桌面双击读取到不同的 AppData 文件。启动日志保存在该外部目录的 `logs/startup.log`，不会放进发布源码。
+To keep credentials entirely outside the project directory, the Windows launchers also read `%USERPROFILE%/.cybersecurity-training/application-local.yml`. Copy the configuration template there and fill it in, or set `CYBERSECURITY_CONFIG_DIR` to another external directory. The default location uses the ordinary user profile directory to avoid AppData redirection differences between editor processes and desktop launches. Startup logs are written to `logs/startup.log` in that external directory and are not included in the published source.
 
-也可使用环境变量 `DB_URL`、`DB_USERNAME`、`DB_PASSWORD` 和 `AI_API_KEY`。AI 接口使用 DeepSeek 兼容格式，接口和模型配置位于 `backend/src/main/resources/application.yml`。
+You can also use the `DB_URL`, `DB_USERNAME`, `DB_PASSWORD`, and `AI_API_KEY` environment variables. The AI integration uses a DeepSeek-compatible API format. Its endpoint and model settings are in `backend/src/main/resources/application.yml`.
 
-首次启动需要完成数据库初始化与配置。启动器会提前检查缺少配置、MySQL 主机和端口不通、管理端未构建等问题；通过 Maven 测试并不代表数据库已经配置完成。
+Initialize and configure the database before the first launch. The launcher checks for missing configuration, an unreachable MySQL host or port, and a missing admin build. Passing Maven tests does not mean that the database is ready.
 
-### 3. 构建管理后台
+### 3. Build the Admin Dashboard
 
-切换至 Node.js 14，在项目根目录执行：
+Switch to Node.js 14 and run these commands from the project root:
 
 ```powershell
 cd admin-web
@@ -64,11 +64,11 @@ npm run build
 cd ..
 ```
 
-构建结果生成到 `admin-web/dist`。也可在该目录执行 `npm run serve`，启动管理端开发服务器。
+The build is generated in `admin-web/dist`. You can also run `npm run serve` from the `admin-web` directory to start the admin development server.
 
-### 4. 启动后端
+### 4. Start the Backend
 
-在项目根目录打包，然后从 `backend` 目录启动，以便 Spring Boot 加载旁边的 `config/application-local.yml`：
+Build the package from the project root, then start it from the `backend` directory so Spring Boot can load `config/application-local.yml`:
 
 ```powershell
 mvn -f backend/pom.xml clean package
@@ -76,29 +76,29 @@ cd backend
 java -jar target/cybersecurityknowledge-0.0.1-SNAPSHOT.jar
 ```
 
-- 接口检查：`http://localhost:8080/cybersecurityknowledge/config/list`
-- 管理后台：`http://localhost:8080/cybersecurityknowledge/admin/dist/index.html#/login`
+- API check: `http://localhost:8080/cybersecurityknowledge/config/list`
+- Admin dashboard: `http://localhost:8080/cybersecurityknowledge/admin/dist/index.html#/login`
 
-Windows 下也可双击根目录的启动 BAT。它们使用 PATH 中的 Node.js、Java 和 Maven；MySQL 需由你自行启动。脚本使用默认 8080 端口，启动前应关闭占用此端口的其他项目实例。修改管理端后，先重新构建管理端，再打包后端。
+On Windows, you can also double-click the launcher BAT files in the project root. They use Node.js, Java, and Maven from your PATH; start MySQL separately. The scripts use port 8080 by default, so stop any conflicting project instance before launching. After changing the admin frontend, rebuild it before packaging the backend again.
 
-“启动管理后台.bat”会先确保服务可用，再打开默认浏览器；日常查看管理页面只需运行这一个 BAT。“启动后端.bat”只启动接口并显示地址，不会打开浏览器。新启动窗口会显示本次时间和项目目录，避免把旧失败窗口当作本次结果。
+The [admin launcher](%E5%90%AF%E5%8A%A8%E7%AE%A1%E7%90%86%E5%90%8E%E5%8F%B0.bat) checks that the service is available, then opens your default browser. Use this launcher to view the admin dashboard. The [backend launcher](%E5%90%AF%E5%8A%A8%E5%90%8E%E7%AB%AF.bat) starts the API and prints its address without opening a browser. Each new launch window displays its timestamp and project directory so it can be distinguished from an older failure window.
 
-### 5. 运行微信小程序
+### 5. Run the WeChat Mini Program
 
-直接体验：先按前文配置、启动数据库和后端，再在微信开发者工具中导入仓库内的 `wechat-miniapp`。当前编译配置使用游客 AppID，可按调试需要改用自己的 AppID。客户端默认连接本机 `http://localhost:8080/cybersecurityknowledge/`。
+To try the compiled build, configure and start the database and backend as described above, then import `wechat-miniapp` into WeChat Developer Tools. The bundled configuration uses a guest AppID; replace it with your own AppID if required for debugging. The client connects to `http://localhost:8080/cybersecurityknowledge/` by default.
 
-需要修改源码时：
+To modify the source:
 
-1. 使用 HBuilderX 打开 `miniapp`，在 `manifest.json` 中填写自己的 AppID。
-2. 检查 `miniapp/api/base.js` 中的后端地址。在真机上，`localhost` 指手机自身，需要换成可访问的服务地址。
-3. 执行“运行到小程序模拟器 → 微信开发者工具”。
-4. 在项目根目录执行 `npm --prefix tools run sync:wechat`，同步编译结果到 `wechat-miniapp`。
+1. Open `miniapp` in HBuilderX and enter your own AppID in `manifest.json`.
+2. Check the backend URL in `miniapp/api/base.js`. On a physical phone, `localhost` refers to the phone itself; use an address the device can reach.
+3. Run the project in the WeChat Mini Program simulator from HBuilderX.
+4. Run `npm --prefix tools run sync:wechat` from the project root to synchronize the compiled output to `wechat-miniapp`.
 
-同步工具保留本机开发者设置。此仓库会收录公开编译目录，但仍忽略 `project.private.config.json`、`.env.local` 等私人设置；再次提交前检查 AppID 和调试参数，保留可公开的演示配置。
+The synchronization tool preserves local developer settings. The public compiled directory is tracked in this repository, while private settings such as `project.private.config.json` and `.env.local` remain ignored. Before committing again, review AppIDs and debug parameters and retain only settings suitable for public demonstrations.
 
-## 检查与测试
+## Checks and Tests
 
-切换至 Node.js 18 或更高版本：
+Switch to Node.js 18 or later:
 
 ```powershell
 npm --prefix tools ci
@@ -107,12 +107,12 @@ npm --prefix tools test
 mvn -f backend/pom.xml test
 ```
 
-本次副本验证结果见 [发布检查记录](docs/RELEASE_CHECK.md)。现有回归用例不代表所有业务缺陷已修复，已知限制见 [安全与使用边界](SECURITY.md)。
+See the [release verification record](docs/RELEASE_CHECK.md) for the results recorded for this release copy. The existing regression tests do not establish that every business logic defect has been fixed. Known limitations are documented in [Security and usage boundaries](SECURITY.md).
 
-## 发布与素材
+## Publishing and Assets
 
-- [上传 GitHub 的步骤](docs/PUBLISHING.md)
-- [第三方组件及授权说明](THIRD_PARTY_NOTICES.md)
-- [图片、视频与制作记录](docs/ASSETS.md)
+- [Publishing to GitHub](docs/PUBLISHING.md)
+- [Third-party components and licensing](THIRD_PARTY_NOTICES.md)
+- [Images, videos, and asset production notes](docs/ASSETS.md)
 
-上传前再次检查暂存文件，不要提交自己的本机配置、用户上传文件、数据库导出或日志。
+Review staged files before uploading. Do not commit private local configuration, actual user uploads, database exports, or logs.
