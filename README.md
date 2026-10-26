@@ -4,7 +4,7 @@ A cybersecurity education demo built with Spring Boot, Vue 2, and uni-app. It in
 
 This repository is a sanitized release copy. Original API keys, database passwords, Mini Program AppIDs, personal profiles, sessions, and learning and exam histories have been removed. Courses, question banks, and supporting media are included for local learning and demonstrations.
 
-**Licensing status: The original project includes a purchased template. Permission to release the complete project as open source or redistribute it has not yet been verified. No project-wide open-source license has been added. Check the original template's terms before making the repository public. See [Licensing status](LICENSE-STATUS.md).**
+**Licensing status: The original project includes a purchased template. Permission to release the complete project as open source or redistribute it has not yet been verified. No project-wide open-source license has been added. Check the original template's terms before making the repository public.**
 
 ## Project Structure
 
@@ -107,7 +107,7 @@ npm --prefix tools test
 mvn -f backend/pom.xml test
 ```
 
-See the [release verification record](docs/RELEASE_CHECK.md) for the results recorded for this release copy. The existing regression tests do not establish that every business logic defect has been fixed. Known limitations are documented in [Security and usage boundaries](SECURITY.md).
+See the [release verification record](docs/RELEASE_CHECK.md) for the results recorded for this release copy. The existing regression tests do not establish that every business logic defect has been fixed.
 
 ## Publishing and Assets
 

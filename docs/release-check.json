@@ -1,8 +1,8 @@
 {
   "kind": "sanitized-source-and-wechat-build-release",
   "allChecksPassed": true,
-  "sourceFiles": 1327,
-  "sourceBytes": 14767929,
+  "sourceFiles": 1325,
+  "sourceBytes": 14765714,
   "privacy": {
     "knownPrivateMarkerMatches": 0,
     "commonCredentialPatternMatches": 0,
@@ -154,19 +154,9 @@
       "sha256": "a9ae1db61033476871d5397c1249a2cca31bab4be54410275282222d54685344"
     },
     {
-      "path": "LICENSE-STATUS.md",
-      "bytes": 654,
-      "sha256": "b93d53813fd4f75796d2942a032f668697bd3b512331fcb7fc390cd6f5dd49e0"
-    },
-    {
       "path": "README.md",
-      "bytes": 8019,
-      "sha256": "b397b7d21e40cb67b459de62fd500d138ae62b3b923870780da2e628e1a4cf50"
-    },
-    {
-      "path": "SECURITY.md",
-      "bytes": 1436,
-      "sha256": "32506baded256ecf621f636adbb7cfa36cf98064c61f97dc74987a6b73ccc391"
+      "bytes": 7894,
+      "sha256": "bf51780cef680cba9668992786730412a7c005b57774a41fce620a43d864adc8"
     },
     {
       "path": "THIRD_PARTY_NOTICES.md",
